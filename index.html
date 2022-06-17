@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Time - Weather - To Do App</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Icons -->
+      <nav class="icon-container">
+        <ul class="icons">
+          <li class="active" id="time-icon"><i class="fas fa-clock"></i></li>
+          <li id="weather-icon"><i class="fas fa-cloud"></i></li>
+          <li id="todo-icon"><i class="fas fa-list-ul"></i></li>
+        </ul>
+      </nav>
+
+      <div class="content-container">
+        <!-- Time & Date -->
+        <div class="time-container" id="time-container">
+          <div>
+            <span id="time" class="time"></span>
+          </div>
+          <div>
+            <span class="date" id="date"></span>
+          </div>
+          <div class="switch">
+            <input type="checkbox" class="checkbox" id="toggle" />
+            12HR <label for="toggle" class="toggle-hour"></label> 24HR
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="weather-container" id="weather-container">
+          <h1>Weather</h1>
+          <div class="search-location">
+            <input
+              type="text"
+              class="location-input"
+              id="location-input"
+              placeholder="Enter city..."
+            />
+            <button class="search-btn" id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <div class="weather" id="weather"></div>
+        </div>
+
+        <!-- To Do List -->
+        <div class="todo-container" id="todo-container">
+          <h1>To Do List</h1>
+          <div class="input">
+            <input
+              type="text"
+              class="task-input"
+              id="task-input"
+              placeholder="Add Task..."
+            />
+            <button id="submit-btn" class="submit-btn">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <div id="todo-list" class="todo-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

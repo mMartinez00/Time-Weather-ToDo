@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+
+:root {
+  --dark-grey: rgb(42, 42, 42);
+  --grey: rgb(111, 111, 111);
+  --blue: #3a5789;
+  --white: #d8d8d8;
+  --black: #000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 550px;
+  height: 420px;
+  display: flex;
+  background-color: var(--grey);
+  box-shadow: 3px 3px 6px #000;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Icons */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.75;
+}
+
+.icons {
+  position: fixed;
+  list-style: none;
+  font-size: 38px;
+  color: var(--white);
+}
+
+.icons li {
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: transform 0.4s ease;
+  text-shadow: 2px 8px 5px var(--black);
+}
+
+.icons li:hover {
+  transform: translateY(-3px);
+}
+
+.active {
+  color: var(--blue);
+}
+
+.content-container {
+  flex: 3;
+}
+
+/* Time & Date */
+.time-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: var(--white);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.time-container > div {
+  margin: 10px 0;
+}
+
+.time {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.toggle-hour {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 25px;
+  box-shadow: 2px 2px 5px var(--black);
+  background-color: var(--blue);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.toggle-hour::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.checkbox:checked + .toggle-hour::after {
+  transform: translateX(100%);
+}
+
+.checkbox {
+  display: none;
+}
+
+/* Weather */
+.weather-container {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+}
+
+.weather-container > h1 {
+  text-align: center;
+  text-shadow: 2px 4px 5px var(--black);
+  letter-spacing: 2px;
+}
+
+.weather-container h1.error {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.search-location {
+  position: relative;
+  width: calc(100% - 1rem);
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.location-input {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1em;
+  font-family: inherit;
+  border: none;
+  padding: 0 8px;
+  box-shadow: 2px 3px 2px var(--black);
+  border-radius: 12px;
+  outline: none;
+}
+
+.location-input::placeholder {
+  color: var(--black);
+}
+
+.search-btn {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 18px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+}
+
+.search-btn:active {
+  font-size: 16px;
+}
+
+.location {
+  font-size: 32px;
+  margin-bottom: 5px;
+  text-shadow: 2px 4px 5px var(--black);
+}
+
+.weather {
+  padding: 10px;
+}
+
+.temp {
+  font-size: 65px;
+  margin-bottom: 5px;
+}
+
+.humidity,
+.description,
+.wind,
+.alert {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.temp-icon {
+  display: flex;
+}
+
+/* To Do */
+.todo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.todo-container h1 {
+  letter-spacing: 2px;
+  text-shadow: 2px 4px 5px var(--black);
+  text-align: center;
+}
+
+.input {
+  position: relative;
+  width: calc(100% - 1rem);
+  height: 25px;
+}
+
+.task-input {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1em;
+  font-family: inherit;
+  border: none;
+  padding: 0 8px;
+  box-shadow: 2px 3px 2px var(--black);
+  border-radius: 12px;
+  outline: none;
+}
+
+.task-input::placeholder {
+  color: var(--black);
+}
+
+.submit-btn {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 18px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+}
+
+.todo-list {
+  margin-top: 28px;
+  padding: 0 26px 0 8px;
+}
+
+.todo-list .task {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.alert {
+  font-size: 18px;
+  margin: 5px 0;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+}
+
+.delete-task {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: var(--white);
+  text-shadow: 2px 4px 5px var(--black);
+  cursor: pointer;
+}
+
+.delete-task:active,
+.submit-btn:active {
+  font-size: 16px;
+}
