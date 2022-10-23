@@ -1,3 +1,4 @@
+const switchBtn = document.getElementById("toggle");
 const location_input = document.getElementById("location-input");
 const search_btn = document.getElementById("search-btn");
 const task_input = document.getElementById("task-input");
@@ -46,7 +47,7 @@ function getTimeAndDate() {
   // Get Time
   let hour;
   let ampm;
-  if (document.getElementById("toggle").checked === true) {
+  if (switchBtn.checked === true) {
     hour = date.getHours();
     ampm = "";
   } else {
