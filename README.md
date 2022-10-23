@@ -13,6 +13,14 @@ This is an app with three functionalities:
 
 What motivited me to build this app was a desire to create an app with three functionalities. Building this app was useful to touch bases on JavaScripts date object, Fetch API, and creating a simple To Do list.
 
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+
+Being the first project I built, I recognize the code needs major refactoring. One example would be in the `iconScroll()` function. As I continue learning I'll implement better practice and improved techniques to this project.
+
 ---
 
 In the function `getTimeAndDate()` the Conditional Operator was useful to display the minutes and seconds.
